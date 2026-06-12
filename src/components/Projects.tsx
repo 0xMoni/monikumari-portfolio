@@ -44,7 +44,7 @@ const projects = [
       "Auto-generated compliance reports for management",
       "Real-time Firestore staff coordination dashboard",
     ],
-    role: "Built the full frontend, Gemini API integrations, and Firestore real-time coordination. Team of 2 (404 Coders — Google Solution Challenge 2026).",
+    role: "Built the full frontend, Gemini API integrations, and Firestore real-time coordination. Team of 2.",
     github: null,
     live: "https://sahayakai-one.vercel.app",
     number: "03",
@@ -62,34 +62,6 @@ const projects = [
     github: "https://github.com/0xMoni/LitterLens",
     live: null,
     number: "04",
-  },
-  {
-    name: "Shrimpin",
-    problem: "Tracks your posture and yells at you every time you hunch. Your spine deserves better.",
-    tech: ["Python", "OpenCV", "MediaPipe"],
-    features: [
-      "Real-time posture detection using MediaPipe pose landmarks",
-      "Audio alerts triggered when hunch angle exceeds threshold",
-      "Configurable sensitivity and alert frequency",
-    ],
-    role: "Team of 2 — built the calibration system and the Chrome extension.",
-    github: "https://github.com/0xMoni/Shrimpin",
-    live: null,
-    number: "05",
-  },
-  {
-    name: "Fridge2Plate",
-    problem: "AI-powered recipe suggestions from whatever's in your kitchen. No grocery runs needed.",
-    tech: ["TypeScript", "Gemini API", "React"],
-    features: [
-      "Snap a photo of your fridge, get recipe suggestions",
-      "Gemini API for ingredient recognition and recipe generation",
-      "Filter by cuisine, dietary restrictions, and cook time",
-    ],
-    role: "Solo developer.",
-    github: "https://github.com/0xMoni/Fridge2Plate",
-    live: null,
-    number: "06",
   },
 ];
 

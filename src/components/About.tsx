@@ -42,9 +42,8 @@ export default function About() {
               I&apos;m a full-stack developer and UI/UX designer who loves
               building AI-powered mobile and web apps. I&apos;ve shipped 4 live
               deployed products — including a monetized React Native app with
-              real paying users. I also participated in the Google Solution
-              Challenge 2026 where my team built an AI-powered crisis response
-              system.
+              20+ users and real paying subscribers. I design in Figma and
+              ship to production.
             </p>
           </motion.div>
 
@@ -107,11 +106,11 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="flex flex-wrap gap-3 text-xs font-mono text-accent-cream/40">
-              <span>Google Solution Challenge &apos;26</span>
-              <span>·</span>
               <span>INNOVATEX 4.0</span>
               <span>·</span>
               <span>NMIT Sparklab Designathon</span>
+              <span>·</span>
+              <span>Open to internships</span>
             </div>
             <a
               href="/resume.pdf"

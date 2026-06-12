@@ -95,7 +95,7 @@ export default function Hero() {
       {/* Marquee at bottom */}
       <div className="absolute bottom-0 left-0 right-0">
         <Marquee
-          items={["DEVELOPER", "CREATOR", "ARTIST", "BUILDER", "•"]}
+          items={["DEVELOPER", "DESIGNER", "BUILDER", "SHIPPER", "•"]}
           speed={25}
         />
       </div>
