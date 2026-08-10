@@ -7,7 +7,7 @@ import { useInView } from "framer-motion";
 const skillGroups = [
   {
     category: "Languages",
-    items: ["C++", "Python", "TypeScript", "JavaScript", "SQL"],
+    items: ["C++", "C", "Python", "TypeScript", "JavaScript", "SQL"],
   },
   {
     category: "Frontend",
