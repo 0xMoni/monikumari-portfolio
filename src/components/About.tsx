@@ -20,7 +20,7 @@ export default function About() {
           <span className="text-sm font-mono text-accent-mauve tracking-[0.3em] uppercase">
             01 / about
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-accent-cream mt-4">
+          <h2 className="heading-section font-bold text-accent-cream mt-4">
             More than just
             <br />
             <span className="text-accent-blue">a developer.</span>

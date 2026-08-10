@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 const projects = [
   {
     name: "UniTrack",
+    impact: ["20+ active users", "Paying subscribers", "15 min → 30 sec onboarding"],
     problem: "Helps college students track attendance without refreshing their ERP portal 47 times a day.",
     tech: ["React Native", "Expo", "Firebase", "Razorpay", "Gemini API", "Next.js"],
     features: [
@@ -21,6 +22,7 @@ const projects = [
   },
   {
     name: "Quarry",
+    impact: ["5× faster than SQLite", "731ms → 53ms GROUP BY", "68 tests passing"],
     problem: "A SQL query engine written from scratch that runs analytical queries 5× faster than SQLite.",
     tech: ["Python", "NumPy", "SQL", "Systems Programming"],
     features: [
@@ -36,6 +38,7 @@ const projects = [
   },
   {
     name: "goIRL",
+    impact: ["3 event sources aggregated", "Daily automated ingestion"],
     problem: "Aggregates tech events, hackathons, and meetups across India so you never miss one.",
     tech: ["Next.js 16", "Supabase", "MapLibre GL", "Tailwind CSS", "Vercel"],
     features: [
@@ -51,6 +54,7 @@ const projects = [
   },
   {
     name: "SahayakAI",
+    impact: ["12 Indian languages", "Sub-2s SOS triage", "Team of 2"],
     problem: "AI-powered crisis co-pilot for hotels — handles emergencies in 12 Indian languages.",
     tech: ["Next.js 15", "Gemini 2.5 Flash", "Firebase", "Vercel"],
     features: [
@@ -66,6 +70,7 @@ const projects = [
   },
   {
     name: "LitterLens",
+    impact: ["Alerts in under 30s", "Ward-level mapping", "Team of 2"],
     problem: "Detects illegal garbage dumps from satellite imagery and notifies the government in under 30 seconds.",
     tech: ["React Native", "Expo", "YOLO/Roboflow", "Firebase", "Google Maps API"],
     features: [
@@ -88,10 +93,11 @@ function ProjectCard({
   index: number;
 }) {
   const [expanded, setExpanded] = useState(false);
+  const panelId = `project-${project.name.toLowerCase()}-details`;
 
   return (
     <motion.div
-      className="border-b border-accent-cream/10 py-10"
+      className="border-b border-accent-cream/10 py-10 md:py-12"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -132,9 +138,23 @@ function ProjectCard({
       </div>
 
       {/* Problem statement */}
-      <p className="text-accent-cream/60 text-base mb-5">
+      <p className="text-accent-cream/70 text-base md:text-lg leading-relaxed mb-5 max-w-2xl">
         {project.problem}
       </p>
+
+      {/* Outcomes. These are the numbers worth reading, so they sit above the
+          fold rather than inside the collapsed section -- nobody expands a
+          card to find out whether the work mattered. */}
+      <ul className="flex flex-wrap gap-x-6 gap-y-2 mb-5">
+        {project.impact.map((metric) => (
+          <li key={metric} className="flex items-center gap-2">
+            <span aria-hidden="true" className="w-1 h-1 rounded-full bg-accent-blue" />
+            <span className="text-sm md:text-base font-medium text-accent-blue">
+              {metric}
+            </span>
+          </li>
+        ))}
+      </ul>
 
       {/* Tech badges */}
       <div className="flex flex-wrap gap-2 mb-5">
@@ -150,13 +170,22 @@ function ProjectCard({
 
       {/* Expandable features */}
       <button
+        type="button"
         onClick={() => setExpanded(!expanded)}
-        className="text-xs font-mono text-accent-blue/70 hover:text-accent-blue transition-colors mb-3"
+        aria-expanded={expanded}
+        aria-controls={`${panelId}`}
+        className="text-xs font-mono text-accent-blue/70 hover:text-accent-blue transition-colors mb-3 rounded"
       >
-        {expanded ? "− hide details" : "+ show features & role"}
+        {expanded ? "− hide how it was built" : "+ how it was built"}
       </button>
 
       <motion.div
+        id={panelId}
+        // Collapsed content stays in the DOM for the height animation, so it
+        // has to be hidden from assistive tech explicitly -- otherwise screen
+        // readers announce details that are visually collapsed.
+        aria-hidden={!expanded}
+        inert={!expanded ? true : undefined}
         initial={false}
         animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }}
         transition={{ duration: 0.3 }}
@@ -212,7 +241,7 @@ export default function Projects() {
           <span className="text-sm font-mono text-accent-mauve tracking-[0.3em] uppercase">
             02 / work
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-accent-cream mt-4">
+          <h2 className="heading-section font-bold text-accent-cream mt-4">
             Selected
             <br />
             <span className="text-accent-blue">projects.</span>

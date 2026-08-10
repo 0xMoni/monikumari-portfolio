@@ -87,3 +87,24 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Typography
+   --------------------------------------------------------------------------- */
+
+/* Section headings were text-4xl md:text-6xl, which snaps from 36px to 60px
+   the instant the viewport crosses 768px. clamp() scales continuously between
+   the same two endpoints instead, so nothing jumps. The negative tracking is
+   the usual correction for display sizes -- default spacing reads loose once
+   type gets this large. */
+.heading-section {
+  font-size: clamp(2.25rem, 1.5rem + 3.2vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Long-form paragraphs read better with a slightly looser line height than
+   Tailwind's default. */
+.prose-body {
+  line-height: 1.7;
+}

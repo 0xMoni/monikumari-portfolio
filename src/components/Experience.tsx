@@ -63,7 +63,7 @@ export default function Experience() {
           <span className="text-sm font-mono text-accent-mauve tracking-[0.3em] uppercase">
             04 / experience
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-accent-cream mt-4">
+          <h2 className="heading-section font-bold text-accent-cream mt-4">
             Hackathons &
             <br />
             <span className="text-accent-blue">milestones.</span>

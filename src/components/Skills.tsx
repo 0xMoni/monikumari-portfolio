@@ -51,7 +51,7 @@ export default function Skills() {
           <span className="text-sm font-mono text-accent-mauve tracking-[0.3em] uppercase">
             03 / skills
           </span>
-          <h2 className="text-4xl md:text-6xl font-bold text-accent-cream mt-4">
+          <h2 className="heading-section font-bold text-accent-cream mt-4">
             Tools I
             <br />
             <span className="text-accent-blue">wield.</span>
