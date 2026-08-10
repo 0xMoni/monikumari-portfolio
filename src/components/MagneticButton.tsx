@@ -26,6 +26,9 @@ export default function MagneticButton({
   const reset = () => setPos({ x: 0, y: 0 });
 
   const Tag = href ? "a" : "div";
+  // mailto: and tel: links should open in the user's mail client, not a new
+  // browser tab, so only real web links get target="_blank".
+  const opensNewTab = Boolean(href && /^https?:/i.test(href));
 
   return (
     <motion.div
@@ -37,11 +40,14 @@ export default function MagneticButton({
     >
       <Tag
         href={href}
-        target={href ? "_blank" : undefined}
-        rel={href ? "noopener noreferrer" : undefined}
+        target={opensNewTab ? "_blank" : undefined}
+        rel={opensNewTab ? "noopener noreferrer" : undefined}
         className={className}
       >
         {children}
+        {/* Screen readers otherwise give no warning that focus is about to
+            jump to a new tab. */}
+        {opensNewTab && <span className="sr-only"> (opens in a new tab)</span>}
       </Tag>
     </motion.div>
   );

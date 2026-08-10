@@ -10,8 +10,11 @@ import SmoothScroll from "@/components/SmoothScroll";
 export default function Home() {
   return (
     <SmoothScroll>
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
 
-      <main className="flex flex-col">
+      <main id="main" className="flex flex-col">
         <Hero />
         <About />
         <Projects />
