@@ -108,3 +108,53 @@ body {
 .prose-body {
   line-height: 1.7;
 }
+
+/* ---------------------------------------------------------------------------
+   Ambient background
+   --------------------------------------------------------------------------- */
+
+/* The hero blobs used animate-pulse, which only fades opacity -- they never
+   moved, so the "gradient mesh" read as three static circles blinking. These
+   drift on slow, differently-timed loops. The durations are deliberately
+   coprime-ish (29s/37s/43s) so the three never line up and the motion never
+   looks like a loop. Transform and opacity only, so it stays on the compositor
+   and costs no layout work. */
+@keyframes drift-a {
+  0%,
+  100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.75; }
+  33%  { transform: translate3d(7vw, -5vh, 0) scale(1.18); opacity: 1; }
+  66%  { transform: translate3d(-4vw, 6vh, 0) scale(0.88); opacity: 0.6; }
+}
+@keyframes drift-b {
+  0%,
+  100% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.9; }
+  40%  { transform: translate3d(-8vw, -7vh, 0) scale(0.85); opacity: 0.55; }
+  70%  { transform: translate3d(5vw, 4vh, 0) scale(1.2); opacity: 1; }
+}
+@keyframes drift-c {
+  0%,
+  100% { transform: translate3d(-50%, -50%, 0) scale(1); opacity: 0.5; }
+  50%  { transform: translate3d(-42%, -58%, 0) scale(1.35); opacity: 0.9; }
+}
+
+.drift-a { animation: drift-a 29s ease-in-out infinite; will-change: transform, opacity; }
+.drift-b { animation: drift-b 37s ease-in-out infinite; will-change: transform, opacity; }
+.drift-c { animation: drift-c 43s ease-in-out infinite; will-change: transform, opacity; }
+
+/* Film grain across the whole page, not just the hero, so the texture is
+   continuous instead of stopping at the fold. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==");
+}
+
+/* Drifting backgrounds are exactly what reduced-motion is for. */
+@media (prefers-reduced-motion: reduce) {
+  .drift-a,
+  .drift-b,
+  .drift-c { animation: none; }
+}

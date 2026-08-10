@@ -7,11 +7,13 @@ import Marquee from "./Marquee";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Animated gradient mesh background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-accent-blue/10 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent-mauve/20 blur-[100px] animate-[pulse_4s_ease-in-out_infinite]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-accent-green/5 blur-[80px] animate-[pulse_6s_ease-in-out_infinite]" />
+      {/* Drifting gradient mesh. Each blob moves on its own slow loop so the
+          three never sync up -- that mismatch is what stops it reading as a
+          repeating animation. */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <div className="absolute top-1/4 left-1/4 w-[60vw] max-w-[600px] aspect-square rounded-full bg-accent-blue/10 blur-[120px] drift-a" />
+        <div className="absolute bottom-1/4 right-1/4 w-[50vw] max-w-[500px] aspect-square rounded-full bg-accent-mauve/20 blur-[100px] drift-b" />
+        <div className="absolute top-1/2 left-1/2 w-[40vw] max-w-[400px] aspect-square rounded-full bg-accent-green/[0.07] blur-[80px] drift-c" />
       </div>
 
       {/* Grid overlay */}

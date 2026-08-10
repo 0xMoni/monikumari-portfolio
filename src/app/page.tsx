@@ -14,6 +14,11 @@ export default function Home() {
         Skip to content
       </a>
 
+      {/* Grain sits above the page but below content, so the texture carries
+          past the hero instead of stopping at the fold. */}
+      <div className="grain" aria-hidden="true" />
+
+
       <main id="main" className="flex flex-col">
         <Hero />
         <About />
