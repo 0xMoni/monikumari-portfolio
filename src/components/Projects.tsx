@@ -20,6 +20,21 @@ const projects = [
     number: "01",
   },
   {
+    name: "Quarry",
+    problem: "A SQL query engine written from scratch that runs analytical queries 5× faster than SQLite.",
+    tech: ["Python", "NumPy", "SQL", "Systems Programming"],
+    features: [
+      "Hand-written lexer, recursive-descent parser, logical planner, vectorized executor",
+      "Profiled a GROUP BY bottleneck and added dictionary encoding: 731ms → 53ms (13.8×)",
+      "Projection pushdown — a query over 2 columns never reads the other 5",
+      "Differential testing against SQLite across 17 query shapes, catching 2 real bugs",
+    ],
+    role: "Solo — designed and built every layer, from the tokenizer to the executor. 68 tests passing.",
+    github: "https://github.com/0xMoni/quarry",
+    live: null,
+    number: "02",
+  },
+  {
     name: "goIRL",
     problem: "Aggregates tech events, hackathons, and meetups across India so you never miss one.",
     tech: ["Next.js 16", "Supabase", "MapLibre GL", "Tailwind CSS", "Vercel"],
@@ -32,7 +47,7 @@ const projects = [
     role: "Solo developer — full-stack from database schema to deployment.",
     github: "https://github.com/0xMoni/goIRL",
     live: "https://goirl-tau.vercel.app",
-    number: "02",
+    number: "03",
   },
   {
     name: "SahayakAI",
@@ -47,7 +62,7 @@ const projects = [
     role: "Built the full frontend, Gemini API integrations, and Firestore real-time coordination. Team of 2.",
     github: null,
     live: "https://sahayakai-one.vercel.app",
-    number: "03",
+    number: "04",
   },
   {
     name: "LitterLens",
@@ -61,7 +76,7 @@ const projects = [
     role: "Built the mobile app, map integration, and detection pipeline. Team of 2 (INNOVATEX 4.0 Hackathon).",
     github: "https://github.com/0xMoni/LitterLens",
     live: null,
-    number: "04",
+    number: "05",
   },
 ];
 

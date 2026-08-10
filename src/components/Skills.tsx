@@ -7,7 +7,7 @@ import { useInView } from "framer-motion";
 const skillGroups = [
   {
     category: "Languages",
-    items: ["TypeScript", "Python", "JavaScript", "SQL", "C"],
+    items: ["C++", "Python", "TypeScript", "JavaScript", "SQL"],
   },
   {
     category: "Frontend",
@@ -20,6 +20,10 @@ const skillGroups = [
   {
     category: "AI / ML",
     items: ["Google Gemini API", "YOLO/Roboflow", "OpenCV", "MediaPipe", "Prompt Engineering"],
+  },
+  {
+    category: "Systems & Data",
+    items: ["NumPy", "Query Optimization", "Vectorized Execution", "Performance Profiling"],
   },
   {
     category: "Databases",

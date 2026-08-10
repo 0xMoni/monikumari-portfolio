@@ -7,7 +7,7 @@ import MagneticButton from "./MagneticButton";
 
 const links = [
   { label: "GitHub", url: "https://github.com/0xMoni" },
-  { label: "LinkedIn", url: "https://linkedin.com/in/moni-kumari" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/in/moni-kumariii" },
   { label: "Twitter", url: "https://twitter.com/monii_k07" },
   { label: "Email", url: "mailto:monik.work07@gmail.com" },
 ];
