@@ -15,11 +15,11 @@ const skillGroups = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs", "Firebase Auth"],
+    items: ["Node.js", "Express.js", "REST APIs", "Firebase Auth", "Razorpay", "Webhooks", "Idempotency"],
   },
   {
     category: "AI / ML",
-    items: ["Google Gemini API", "YOLO/Roboflow", "OpenCV", "MediaPipe", "Prompt Engineering"],
+    items: ["Google Gemini API", "Vercel AI SDK", "Structured Outputs (Zod)", "LLM Evaluation", "YOLO/Roboflow", "OpenCV", "MediaPipe"],
   },
   {
     category: "Systems & Data",

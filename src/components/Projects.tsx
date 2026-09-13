@@ -5,6 +5,22 @@ import { useRef, useState } from "react";
 
 const projects = [
   {
+    name: "RetryRight",
+    impact: ["99.5% accuracy over 208 payments", "0 unsafe actions", "1,040 → 145 inference calls"],
+    problem: "Failed-payment recovery for Razorpay subscriptions. An LLM reads the gateway error; deterministic policy decides whether money actually moves.",
+    tech: ["TypeScript", "Vercel AI SDK", "Groq", "Zod", "Razorpay", "Vitest"],
+    features: [
+      "Seven ordered policy gates authorise retries on state, confidence, mandate, class, attempts, economics and budget",
+      "Confidence comes from 5-sample agreement, not model self-report, which returns ~0.9 regardless of ambiguity",
+      "Execution-time state re-check catches decisions that were correct when made and stale when they run",
+      "37 tests, adversarial suite, ablation, sensitivity analysis and 40-run variance testing",
+    ],
+    role: "Solo — shortlisted for the Razorpay AI Buildathon 2026.",
+    github: "https://github.com/0xMoni/retryright",
+    live: null,
+    number: "01",
+  },
+  {
     name: "UniTrack",
     impact: ["20+ active users", "Paying subscribers", "15 min → 30 sec onboarding"],
     problem: "Helps college students track attendance without refreshing their ERP portal 47 times a day.",
@@ -18,7 +34,7 @@ const projects = [
     role: "Solo developer — built the entire app, web version, backend, and payment integration.",
     github: "https://github.com/0xMoni/UniTrack-app",
     live: "https://unitrack-web.vercel.app",
-    number: "01",
+    number: "02",
   },
   {
     name: "Quarry",
@@ -34,7 +50,7 @@ const projects = [
     role: "Solo — designed and built every layer, from the tokenizer to the executor. 68 tests passing.",
     github: "https://github.com/0xMoni/quarry",
     live: null,
-    number: "02",
+    number: "03",
   },
   {
     name: "goIRL",
@@ -50,7 +66,7 @@ const projects = [
     role: "Solo developer — full-stack from database schema to deployment.",
     github: "https://github.com/0xMoni/goIRL",
     live: "https://goirl-tau.vercel.app",
-    number: "03",
+    number: "04",
   },
   {
     name: "SahayakAI",
@@ -65,8 +81,8 @@ const projects = [
     ],
     role: "Built the full frontend, Gemini API integrations, and Firestore real-time coordination. Team of 2.",
     github: null,
-    live: "https://sahayakai-one.vercel.app",
-    number: "04",
+    live: null,
+    number: "05",
   },
   {
     name: "LitterLens",
@@ -81,7 +97,7 @@ const projects = [
     role: "Built the mobile app, map integration, and detection pipeline. Team of 2 (INNOVATEX 4.0 Hackathon).",
     github: "https://github.com/0xMoni/LitterLens",
     live: null,
-    number: "05",
+    number: "06",
   },
 ];
 
