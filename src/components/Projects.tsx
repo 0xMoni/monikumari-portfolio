@@ -69,22 +69,6 @@ const projects = [
     number: "04",
   },
   {
-    name: "SahayakAI",
-    impact: ["12 Indian languages", "Sub-2s SOS triage", "Team of 2"],
-    problem: "AI-powered crisis co-pilot for hotels — handles emergencies in 12 Indian languages.",
-    tech: ["Next.js 15", "Gemini 2.5 Flash", "Firebase", "Vercel"],
-    features: [
-      "Pre-crisis CCTV crowd density analysis with Gemini Vision",
-      "Real-time SOS triage in 12 Indian languages (sub-2s classification)",
-      "Auto-generated compliance reports for management",
-      "Real-time Firestore staff coordination dashboard",
-    ],
-    role: "Built the full frontend, Gemini API integrations, and Firestore real-time coordination. Team of 2.",
-    github: null,
-    live: null,
-    number: "05",
-  },
-  {
     name: "LitterLens",
     impact: ["Alerts in under 30s", "Ward-level mapping", "Team of 2"],
     problem: "Detects illegal garbage dumps from satellite imagery and notifies the government in under 30 seconds.",
@@ -97,7 +81,7 @@ const projects = [
     role: "Built the mobile app, map integration, and detection pipeline. Team of 2 (INNOVATEX 4.0 Hackathon).",
     github: "https://github.com/0xMoni/LitterLens",
     live: null,
-    number: "06",
+    number: "05",
   },
 ];
 
