@@ -40,7 +40,7 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <p className="text-accent-cream/80 leading-relaxed relative z-10 text-base md:text-lg">
               I&apos;m a full-stack developer and UI/UX designer who loves
-              building AI-powered mobile and web apps. I&apos;ve shipped 4 live
+              building AI-powered mobile and web apps. I&apos;ve shipped 3 live
               deployed products — including a monetized React Native app with
               20+ users and real paying subscribers. I design in Figma and
               ship to production.
@@ -49,7 +49,7 @@ export default function About() {
 
           {/* Right column - 2x2 grid of stats */}
           <div className="col-span-4 md:col-span-2 grid grid-cols-2 gap-3">
-            {/* 4 live apps */}
+            {/* 3 live apps */}
             <motion.div
               className="p-5 rounded-2xl border border-accent-cream/10 bg-accent-blue/[0.06] flex flex-col items-center justify-center group hover:border-accent-blue/40 transition-all duration-500"
               initial={{ opacity: 0, y: 30 }}
@@ -57,7 +57,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.1 }}
               whileHover={{ scale: 1.05 }}
             >
-              <span className="text-3xl md:text-4xl font-bold text-accent-blue">4</span>
+              <span className="text-3xl md:text-4xl font-bold text-accent-blue">3</span>
               <span className="text-xs text-accent-cream/40 font-mono mt-1">live apps</span>
             </motion.div>
 

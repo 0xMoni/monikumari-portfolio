@@ -38,10 +38,10 @@ const experiences = [
     date: "2026",
   },
   {
-    title: "4 Live Deployed Applications",
+    title: "3 Live Deployed Applications",
     type: "Milestone",
     description:
-      "Shipped and maintained production apps: sahayakai-one.vercel.app, goirl-tau.vercel.app, unitrack-web.vercel.app, and this portfolio.",
+      "Shipped and maintained production apps: unitrack-web.vercel.app, goirl-tau.vercel.app, and this portfolio.",
     team: "Solo / Team",
     date: "2025–2026",
   },
